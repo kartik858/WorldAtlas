@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-slate-950 text-gray-200 antialiased;
+    font-family: "Inter", sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+
+  button {
+    @apply transition-all duration-300;
+  }
+
+  input,
+  textarea,
+  select {
+    @apply outline-none;
+  }
+}
+
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-6 py-16;
+  }
+
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl shadow-xl;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-linear-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent;
+  }
+}
